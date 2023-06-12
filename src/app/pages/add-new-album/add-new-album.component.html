@@ -1,0 +1,24 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <h1>Album hozzáadása:</h1>
+
+    <!--value:{{form.value | json }}-->
+    <hr>
+
+    <mat-form-field class="w-100">
+        <mat-label>id</mat-label>
+        <input matInput formControlName="id" required>
+    </mat-form-field>
+
+    <mat-form-field class="w-100">
+        <mat-label>userId</mat-label>
+        <input matInput formControlName="userId" required>
+    </mat-form-field>
+
+    <mat-form-field class="w-100">
+        <mat-label>title</mat-label>
+        <input matInput formControlName="title" required>
+    </mat-form-field>
+
+
+    <button class="btn btn-outline-primary w-100">Küldés</button>
+</form>

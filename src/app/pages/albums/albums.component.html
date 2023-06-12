@@ -1,0 +1,21 @@
+<table class="table table-responsive">
+  <thead>
+    <tr>
+      <th [style.text-align]="'center'">id</th>
+      <th [style.text-align]="'center'">userId</th>
+      <th [style.text-align]="'center'">title</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let album of albums">
+      <td [style.text-align]="'center'">{{album.id}} </td>
+      <td [style.text-align]="'center'">{{album.userId}} </td>
+      <td [style.text-align]="'left'">{{album.title}} </td>
+      <td><button [style.width.px]="100" class="btn btn-outline-primary" (click)="onDelete(album.id)">Törlés</button>
+      </td>
+      <td><button [style.width.px]="100" class="btn btn-outline-primary" (click)="onChange(album.id)">Módosítás</button></td>
+    </tr>
+  </tbody>
+</table>
